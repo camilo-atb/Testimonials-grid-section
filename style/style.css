@@ -31,6 +31,10 @@ body{
     /*font-style: normal;
     font-style: italic;*/
     font-size: 0.88rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .contenedor-principal{
@@ -72,6 +76,10 @@ body{
     gap: 15px;
     /* box-shadow: 20px 20px 50px 10px var(--grey-200); */
     box-shadow: 0 0 40px 0px var(--grey-200);
+}
+
+.usuario-dektop{
+    display: none;
 }
 
 .usuario-info{
@@ -141,4 +149,40 @@ body{
     color: var(--grey-400);
     grid-area: kira;
     /* grid-area: patrick; */
+}
+
+@media (min-width: 1200px) {
+    body{
+        padding: 400px 0;
+    }
+    .contenedor-principal{
+        padding: 0;
+        /* outline: 1px solid; */
+        max-width: 1200px;
+        display: grid;
+        grid-template-areas: 
+            "daniel daniel jonathan kira"
+            "jeanette patrick patrick kira";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    .contenedor{
+        gap: 15px;
+        box-shadow: 40px 40px 50px 10px var(--grey-200);
+        /* box-shadow: 0 0 40px 0px var(--grey-200); */
+    }
+
+    .contenedor-daniel{
+        position: relative;
+        z-index: -1;
+    }
+
+    .usuario-dektop{
+        display: unset;
+        position: absolute;
+        right: 13%;
+        top: 1%;
+        z-index: -1;
+        scale: 1.05;
+    }
 }
