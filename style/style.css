@@ -4,6 +4,7 @@
     --purple-50: hsl(260, 100%, 95%);
     --purple-300: hsl(264, 82%, 80%);
     --purple-500: hsl(263, 55%, 52%);
+    --blue-principal: rgb(237, 242, 248);
 
     /* Colores neutros */
     --white: hsl(0, 0%, 100%);
@@ -32,9 +33,7 @@ body{
     font-style: italic;*/
     font-size: 0.88rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: var(--blue-principal);
 }
 
 .contenedor-principal{
@@ -45,11 +44,11 @@ body{
     "jonathan"
     "jeanette"
     "patrick"
-    "kira";
+    "kira"
+    "atribucion";
     gap: 30px;
 }
 
-/* ============= revisar =============*/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -151,9 +150,22 @@ body{
     /* grid-area: patrick; */
 }
 
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    grid-area: atribucion;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
 @media (min-width: 1200px) {
     body{
         padding: 400px 0;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
     .contenedor-principal{
         padding: 0;
@@ -162,7 +174,8 @@ body{
         display: grid;
         grid-template-areas: 
             "daniel daniel jonathan kira"
-            "jeanette patrick patrick kira";
+            "jeanette patrick patrick kira"
+            "atribucion atribucion atribucion atribucion";
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
     }
