@@ -15,7 +15,7 @@
     --black: hsl(0, 0%, 7%);
 
     /* Tipografia */
-    --weight-500: 500;
+    --weight-400: 400;
     --wewight-600: 600;
 }
 
@@ -27,12 +27,118 @@
 
 body{
     font-family: "Barlow Semi Condensed", sans-serif;
-    font-weight: 100;
+    font-weight: var(--weight-400);
     /*font-style: normal;
     font-style: italic;*/
+    font-size: 0.88rem;
+}
+
+.contenedor-principal{
+    padding: 50px 30px;
+    display: grid;
+    grid-template-areas: 
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira";
+    gap: 30px;
+}
+
+/* ============= revisar =============*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /*
 - Mobile: 375px
 - Desktop: 1440px
 */
+
+.contenedor{
+    border-radius: 10px;
+    /* outline: 1px solid; */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* box-shadow: 20px 20px 50px 10px var(--grey-200); */
+    box-shadow: 0 0 40px 0px var(--grey-200);
+}
+
+.usuario-info{
+    display: flex;
+    gap: 20px;
+    /* outline: 1px solid; */
+    align-items: center;
+}
+.usuario-texto{
+    /* outline: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.usuario-h2{
+    font-size: 0.9rem; /*0.8rem para que quede igual*/
+}
+
+.usuario-paragraph{
+    font-size: 0.8rem; /*0.7rem para que quede igual*/
+}
+
+.usuario-img{
+    aspect-ratio: 1/1;
+    height: 35px; /*30px para que quede igual*/
+    border-radius: 50%;
+    display: block;
+}
+
+.opinion-paragraph{
+    font-weight: var(--wewight-600);
+    font-size: 1.34rem;
+}
+
+.opinion-paragraph-two{
+    line-height: 1.5;
+}
+
+.contenedor-daniel{
+    background-color: var(--purple-500);
+    color: var(--white);
+    grid-area: daniel;
+}
+
+.contenedor-jonathan{
+    background-color: var(--grey-400);
+    color: var(--white);
+    grid-area: jonathan;
+}
+
+.contenedor-jeanette{
+    background-color: var(--white);
+    color: var(--grey-400);
+    grid-area: jeanette;
+}
+
+.contenedor-patrick{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    grid-area: patrick;
+    /* grid-area: kira; */
+}
+
+.contenedor-kira{
+    background-color: var(--white);
+    color: var(--grey-400);
+    grid-area: kira;
+    /* grid-area: patrick; */
+}
