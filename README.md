@@ -28,7 +28,7 @@ A continuación, se muestra una vista previa del resultado final en una pantalla
 
 ### Enlace al Proyecto
 
-- [Ver el sitio en línea](https://your-solution-url.com)
+- [Ver el sitio en línea](https://camilo-atb.github.io/Testimonials-grid-section/)
 
 ## Mi Proceso
 
